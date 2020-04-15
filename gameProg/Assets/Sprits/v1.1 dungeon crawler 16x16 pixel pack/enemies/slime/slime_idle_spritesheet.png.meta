@@ -1,7 +1,235 @@
 fileFormatVersion: 2
 guid: f13613cae6a8eec4ca3bbee425d37864
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8419229545697445721
+    second: slime_idle_spritesheet_0
+  - first:
+      213: 1840566023448381967
+    second: slime_idle_spritesheet_1
+  - first:
+      213: 2342331806787505411
+    second: slime_idle_spritesheet_2
+  - first:
+      213: -52550820091185312
+    second: slime_idle_spritesheet_3
+  - first:
+      213: 3584183888247294306
+    second: slime_idle_spritesheet_4
+  - first:
+      213: -2058685138817197663
+    second: slime_idle_spritesheet_5
+  - first:
+      213: 3148633172917775238
+    second: slime_idle_spritesheet_0
+  - first:
+      213: -7263942510569593806
+    second: slime_idle_spritesheet_1
+  - first:
+      213: 6294112001610743385
+    second: slime_idle_spritesheet_2
+  - first:
+      213: 3800430154851260169
+    second: slime_idle_spritesheet_3
+  - first:
+      213: 7599699184211164489
+    second: slime_idle_spritesheet_4
+  - first:
+      213: 8430158798196819181
+    second: slime_idle_spritesheet_5
+  - first:
+      213: 7632231342243816577
+    second: slime_idle_spritesheet_6
+  - first:
+      213: -3647020909612865802
+    second: slime_idle_spritesheet_7
+  - first:
+      213: 4696504164055936833
+    second: slime_idle_spritesheet_8
+  - first:
+      213: 4307783043080300846
+    second: slime_idle_spritesheet_9
+  - first:
+      213: 2581888401100992872
+    second: slime_idle_spritesheet_10
+  - first:
+      213: -3944588140896891246
+    second: slime_idle_spritesheet_11
+  - first:
+      213: 2921691178906625768
+    second: slime_idle_spritesheet_12
+  - first:
+      213: -26384748237235597
+    second: slime_idle_spritesheet_13
+  - first:
+      213: -2081368204968135313
+    second: slime_idle_spritesheet_14
+  - first:
+      213: 1141998715836886890
+    second: slime_idle_spritesheet_15
+  - first:
+      213: -635078889555262256
+    second: slime_idle_spritesheet_16
+  - first:
+      213: -3869288226239553857
+    second: slime_idle_spritesheet_17
+  - first:
+      213: -2744149963052935292
+    second: slime_idle_spritesheet_18
+  - first:
+      213: -1735477552767160777
+    second: slime_idle_spritesheet_19
+  - first:
+      213: 429838918634427889
+    second: slime_idle_spritesheet_20
+  - first:
+      213: 6415815810931867440
+    second: slime_idle_spritesheet_21
+  - first:
+      213: 8874813718515598173
+    second: slime_idle_spritesheet_22
+  - first:
+      213: -5160853878363901655
+    second: slime_idle_spritesheet_23
+  - first:
+      213: 499786081479624989
+    second: slime_idle_spritesheet_24
+  - first:
+      213: -2135505068415660655
+    second: slime_idle_spritesheet_25
+  - first:
+      213: 6816228986301718243
+    second: slime_idle_spritesheet_26
+  - first:
+      213: -3894043661169358372
+    second: slime_idle_spritesheet_27
+  - first:
+      213: 5084305299220334280
+    second: slime_idle_spritesheet_28
+  - first:
+      213: 7185637300243729236
+    second: slime_idle_spritesheet_29
+  - first:
+      213: 135757298613530761
+    second: slime_idle_spritesheet_30
+  - first:
+      213: 2410273007254374730
+    second: slime_idle_spritesheet_31
+  - first:
+      213: 7160302218562826861
+    second: slime_idle_spritesheet_32
+  - first:
+      213: 7692239480282245674
+    second: slime_idle_spritesheet_33
+  - first:
+      213: 2303164683836743820
+    second: slime_idle_spritesheet_34
+  - first:
+      213: 652422406175414614
+    second: slime_idle_spritesheet_35
+  - first:
+      213: -4775560159538681202
+    second: slime_idle_spritesheet_36
+  - first:
+      213: -880808820990745531
+    second: slime_idle_spritesheet_37
+  - first:
+      213: -1056769865564020981
+    second: slime_idle_spritesheet_38
+  - first:
+      213: 6405632930242449360
+    second: slime_idle_spritesheet_39
+  - first:
+      213: -5547460477898564991
+    second: slime_idle_spritesheet_40
+  - first:
+      213: 5247147950857591805
+    second: slime_idle_spritesheet_41
+  - first:
+      213: -4917399294566716387
+    second: slime_idle_spritesheet_42
+  - first:
+      213: -7891565500052641702
+    second: slime_idle_spritesheet_43
+  - first:
+      213: -5314183093598668771
+    second: slime_idle_spritesheet_44
+  - first:
+      213: 2860744674808345582
+    second: slime_idle_spritesheet_45
+  - first:
+      213: -6015709623591279183
+    second: slime_idle_spritesheet_46
+  - first:
+      213: -7490424753358181744
+    second: slime_idle_spritesheet_47
+  - first:
+      213: -2353081529524632209
+    second: slime_idle_spritesheet_48
+  - first:
+      213: -9130108585694911533
+    second: slime_idle_spritesheet_49
+  - first:
+      213: -6956632368274735476
+    second: slime_idle_spritesheet_50
+  - first:
+      213: -5521539211055437886
+    second: slime_idle_spritesheet_51
+  - first:
+      213: -5150585418440476790
+    second: slime_idle_spritesheet_52
+  - first:
+      213: 4577919939417832407
+    second: slime_idle_spritesheet_53
+  - first:
+      213: -8869087606207283513
+    second: slime_idle_spritesheet_54
+  - first:
+      213: -5183895200283516250
+    second: slime_idle_spritesheet_55
+  - first:
+      213: -2241667946071849057
+    second: slime_idle_spritesheet_56
+  - first:
+      213: -8116933499995559781
+    second: slime_idle_spritesheet_57
+  - first:
+      213: 6307406899094549388
+    second: slime_idle_spritesheet_58
+  - first:
+      213: -6085317332267526507
+    second: slime_idle_spritesheet_59
+  - first:
+      213: -8603681556691813975
+    second: slime_idle_spritesheet_60
+  - first:
+      213: -8442035368784860970
+    second: slime_idle_spritesheet_61
+  - first:
+      213: 5188082081047927535
+    second: slime_idle_spritesheet_62
+  - first:
+      213: -1455387995344823772
+    second: slime_idle_spritesheet_63
+  - first:
+      213: -666944162949227013
+    second: slime_idle_spritesheet_64
+  - first:
+      213: -9038544216074686264
+    second: slime_idle_spritesheet_65
+  - first:
+      213: 5715312309635775738
+    second: slime_idle_spritesheet_66
+  - first:
+      213: 7301648122374804893
+    second: slime_idle_spritesheet_67
+  - first:
+      213: -5541546222028344824
+    second: slime_idle_spritesheet_68
+  - first:
+      213: -1213067016067992614
+    second: slime_idle_spritesheet_69
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +259,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +268,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,7 +291,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -72,7 +324,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: slime_idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b66c7403132bb20800000000000000
+      internalID: 3148633172917775238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234e3acc5ca413b90800000000000000
+      internalID: -7263942510569593806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ef780948d295750800000000000000
+      internalID: 6294112001610743385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907979d1717ddb430800000000000000
+      internalID: 3800430154851260169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d7bb2a42e877960800000000000000
+      internalID: 7599699184211164489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4c7a613c0fdf470800000000000000
+      internalID: 8430158798196819181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

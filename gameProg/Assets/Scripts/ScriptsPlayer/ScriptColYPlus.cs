@@ -12,6 +12,11 @@ public class ScriptColYPlus : MonoBehaviour
         {
             scriptPlayer.colWallYPlus = true;
         }
+
+        if (col.gameObject.CompareTag("Ennemi"))
+        {
+            scriptPlayer.colEnnemiYPlus = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -19,6 +24,11 @@ public class ScriptColYPlus : MonoBehaviour
         if (col.gameObject.CompareTag("Wall"))
         {
             scriptPlayer.colWallYPlus = false;
+        }
+
+        if (col.gameObject.CompareTag("Ennemi"))
+        {
+            scriptPlayer.colEnnemiYPlus = false;
         }
     }
 }

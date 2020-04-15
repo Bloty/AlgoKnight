@@ -12,6 +12,11 @@ public class ScriptColXMoins : MonoBehaviour
         {
             scriptPlayer.colWallXMoins = true;
         }
+
+        if (col.gameObject.CompareTag("Ennemi"))
+        {
+            scriptPlayer.colEnnemiXMoins = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -19,6 +24,11 @@ public class ScriptColXMoins : MonoBehaviour
         if (col.gameObject.CompareTag("Wall"))
         {
             scriptPlayer.colWallXMoins = false;
+        }
+
+        if (col.gameObject.CompareTag("Ennemi"))
+        {
+            scriptPlayer.colEnnemiXMoins = false;
         }
     }
 }

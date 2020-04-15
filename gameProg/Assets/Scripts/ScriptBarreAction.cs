@@ -10,6 +10,7 @@ public class ScriptBarreAction : MonoBehaviour
 
     public Transform posPlayer;
     public ScriptPlayer scriptPlayer;
+    public GameObject colHitXPlus, colHitXMoins, colHitYPlus, colHitYMoins;
 
     public ScriptBtFor scriptBtFor;
     public Vector3 posPour;
@@ -54,29 +55,57 @@ public class ScriptBarreAction : MonoBehaviour
         //POur-------------------------------------------
         if (col.gameObject.CompareTag("ActionPour"))
         {
-            Debug.Log("POUR");
-            //Debug.Log(scriptBtFor.listeIteration[0]);
+            //Debug.Log("POUR");
 
             posPour = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-            scriptBtFor.listeIteration[0] = (int)scriptBtFor.listeIteration[0] - 1;
+            scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] = (int)scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] - 1;
 
         }
 
         if (col.gameObject.CompareTag("ActionFinPour"))
         {
-            Debug.Log("Fin POUR");
+            //Debug.Log("Fin POUR");
 
-            if ((int)scriptBtFor.listeIteration[0] >= 0)
+            if ((int)scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] >= 0)
             {
                 transform.position = posPour;
             }
+            else
+            {
+                scriptBtFor.nBBouclePour--;
+            }
         }
         //----------------------------------------------
+
+        //attaque/------------------------------------------
+        if (col.gameObject.CompareTag("ActionAttaque"))
+        {
+            if (scriptPlayer.colEnnemiXPlus == true)
+            {
+                colHitXPlus.SetActive(true);
+            }
+
+            if (scriptPlayer.colEnnemiXMoins == true)
+            {
+                colHitXMoins.SetActive(true);
+            }
+
+            if (scriptPlayer.colEnnemiYPlus == true)
+            {
+                colHitYPlus.SetActive(true);
+            }
+
+            if (scriptPlayer.colEnnemiYMoins == true)
+            {
+                colHitYMoins.SetActive(true);
+            }
+        }
+        //------------------------------------------------
         //fin de l'algo
         if (col.gameObject.CompareTag("FinAction"))
         {
-            Debug.Log("Fin Action");
+            //Debug.Log("Fin Action");
             finAction = true;
 
             this.gameObject.SetActive(false);

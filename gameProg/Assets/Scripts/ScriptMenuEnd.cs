@@ -5,9 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class ScriptMenuEnd : MonoBehaviour
 {
-    public void Level2()
+    private ArrayList listLevel = new ArrayList();
+
+    void Start()
     {
-        SceneManager.LoadScene("Level2");
+        listLevel.Add("Test");
+        listLevel.Add("Level1");
+        listLevel.Add("Level2");
+        //Debug.Log((string)listLevel[ScriptVarGlobal.level]);
+    }
+
+
+    public void nextLevel()
+    {
+        ScriptVarGlobal.level++;
+        SceneManager.LoadScene((string)listLevel[ScriptVarGlobal.level]);
+        
     }
     public void reload()
     {

@@ -14,6 +14,9 @@ TagManager:
   - ActionPosYPlus1
   - ActionPour
   - ActionFinPour
+  - Ennemi
+  - ActionAttaque
+  - Hit
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,11 @@ public class ScriptColYMoins : MonoBehaviour
         {
             scriptPlayer.colWallYMoins = true;
         }
+
+        if (col.gameObject.CompareTag("Ennemi"))
+        {
+            scriptPlayer.colEnnemiYMoins = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -19,6 +24,11 @@ public class ScriptColYMoins : MonoBehaviour
         if (col.gameObject.CompareTag("Wall"))
         {
             scriptPlayer.colWallYMoins = false;
+        }
+
+        if (col.gameObject.CompareTag("Ennemi"))
+        {
+            scriptPlayer.colEnnemiYMoins = false;
         }
     }
 }
