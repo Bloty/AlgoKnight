@@ -12,15 +12,15 @@ public class ScriptMenuEnd : MonoBehaviour
         listLevel.Add("Test");
         listLevel.Add("Level1");
         listLevel.Add("Level2");
-        //Debug.Log((string)listLevel[ScriptVarGlobal.level]);
+        listLevel.Add("Level3");
+        listLevel.Add("Level4");
     }
 
 
     public void nextLevel()
     {
         ScriptVarGlobal.level++;
-        SceneManager.LoadScene((string)listLevel[ScriptVarGlobal.level]);
-        
+        SceneManager.LoadScene((string)listLevel[ScriptVarGlobal.level]);    
     }
     public void reload()
     {
