@@ -5,15 +5,22 @@ using UnityEngine;
 
 public class ScriptBarreAction : MonoBehaviour
 {
+    //barre
     public float speed;
     public Rigidbody2D rb;
-
+    
+    //player
     public Transform posPlayer;
     public ScriptPlayer scriptPlayer;
     public GameObject colHitXPlus, colHitXMoins, colHitYPlus, colHitYMoins;
 
+    //for
     public ScriptBtFor scriptBtFor;
     public Vector3 posPour;
+
+    //item
+    public ScriptWin scriptWin;
+    public ScriptTabItem scriptTabItem;
 
 
     public bool finAction;
@@ -101,6 +108,32 @@ public class ScriptBarreAction : MonoBehaviour
                 colHitYMoins.SetActive(true);
             }
         }
+
+        //Use case---------------------------------
+        //case 0
+        if (col.gameObject.CompareTag("Case0"))
+        {
+            Debug.Log("Use case 0");
+            //Key paramrtre possible(int index)
+            if (scriptTabItem.tabItem[0] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
+            {
+                scriptWin.isOpen = true;
+                scriptTabItem.tabItem[0] = ScriptTabItem.Item.Null;
+                Debug.Log("porte ouvert");
+            }
+            
+        }
+        //case 1
+        if (col.gameObject.CompareTag("Case1"))
+        {
+            Debug.Log("Use case 1");
+        }
+        //case 2
+        if (col.gameObject.CompareTag("Case2"))
+        {
+            Debug.Log("Use case 2");
+        }
+
         //------------------------------------------------
         //fin de l'algo
         if (col.gameObject.CompareTag("FinAction"))

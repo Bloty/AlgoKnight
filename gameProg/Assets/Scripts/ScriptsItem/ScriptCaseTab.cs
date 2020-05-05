@@ -10,7 +10,7 @@ public class ScriptCaseTab : MonoBehaviour
 
     void Update()
     {
-        if (scriptTabItem.tabItem[numeroCase] == ScriptTabItem.Direction.Key)
+        if (scriptTabItem.tabItem[numeroCase] == ScriptTabItem.Item.Key)
         {
             spritKey.SetActive(true);
         }

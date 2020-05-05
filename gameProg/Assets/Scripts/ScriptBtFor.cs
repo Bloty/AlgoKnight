@@ -30,7 +30,6 @@ public class ScriptBtFor: MonoBehaviour
             btFinPour.SetActive(true);
             choixIter.value = 0;
 
-        }
-        
+        }       
     }
 }

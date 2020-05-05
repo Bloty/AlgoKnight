@@ -10,21 +10,21 @@ public class ScriptKey : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
 
-            if (scriptTabItem.tabItem[0] == ScriptTabItem.Direction.Null)
+            if (scriptTabItem.tabItem[0] == ScriptTabItem.Item.Null)
             {
-                scriptTabItem.tabItem[0] = ScriptTabItem.Direction.Key;
+                scriptTabItem.tabItem[0] = ScriptTabItem.Item.Key;
             }
             else
             {
-                if (scriptTabItem.tabItem[1] == ScriptTabItem.Direction.Null)
+                if (scriptTabItem.tabItem[1] == ScriptTabItem.Item.Null)
                 {
-                    scriptTabItem.tabItem[1] = ScriptTabItem.Direction.Key;
+                    scriptTabItem.tabItem[1] = ScriptTabItem.Item.Key;
                 }
                 else
                 {
-                    if (scriptTabItem.tabItem[2] == ScriptTabItem.Direction.Null)
+                    if (scriptTabItem.tabItem[2] == ScriptTabItem.Item.Null)
                     {
-                        scriptTabItem.tabItem[2] = ScriptTabItem.Direction.Key;
+                        scriptTabItem.tabItem[2] = ScriptTabItem.Item.Key;
                     }
                 }
             }

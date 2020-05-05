@@ -17,6 +17,9 @@ TagManager:
   - Ennemi
   - ActionAttaque
   - Hit
+  - Case0
+  - Case1
+  - Case2
   layers:
   - Default
   - TransparentFX

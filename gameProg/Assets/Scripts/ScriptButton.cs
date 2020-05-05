@@ -15,13 +15,17 @@ public class ScriptButton : MonoBehaviour
 
     //bt start
     public GameObject barre;
-    public Button button;
+    public Button buttonStart;
     public int nbAction = 0;
     //---------------------------
 
     //btPour
     public GameObject selectIteration, btFinPour;
     public ScriptBtFor scriptBtFor;
+
+    //btUtiliser
+    public GameObject selectItemUtiliser;
+    public ScriptBtUtiliser scriptBtUtiliser;
 
     void Start()
     {
@@ -43,7 +47,7 @@ public class ScriptButton : MonoBehaviour
     }
 
     //instancier un prefab
-    private void instantiatePrefab(GameObject prefab)
+    public void instantiatePrefab(GameObject prefab)
     {
         Instantiate(prefab, (Transform)listePosAction[nbAction]);
         nbAction++;
@@ -94,7 +98,7 @@ public class ScriptButton : MonoBehaviour
         }
         
         barre.SetActive(true);
-        button.interactable = false;     
+        buttonStart.interactable = false;     
     }
 
     //POUR-------------------------------------
@@ -110,7 +114,7 @@ public class ScriptButton : MonoBehaviour
 
         scriptBtFor.nBBouclePour++;
 
-        button.interactable = false;
+        buttonStart.interactable = false;
     }
     public void buttonFinPour()
     {
@@ -121,7 +125,7 @@ public class ScriptButton : MonoBehaviour
 
         btFinPour.SetActive(false);
 
-        button.interactable = true;
+        buttonStart.interactable = true;
     }
     //-------------------------------------------
 
@@ -132,5 +136,15 @@ public class ScriptButton : MonoBehaviour
         {
             instantiatePrefab(actionAttaque);
         }
+    }
+
+    public void buttonUtiliser()
+    {
+        selectItemUtiliser.SetActive(true);
+        scriptBtUtiliser.drowdownActif = true;
+
+        //scriptBtUtiliser.nbUtilisation++;
+
+        buttonStart.interactable = false;
     }
 }
