@@ -6,7 +6,7 @@ public class ScriptWin : MonoBehaviour
 {
     public ScriptBarreAction scriptBarreAction;
 
-    public Sprite doorClose;
+    public Sprite doorClose, doorOpen;
     public SpriteRenderer spritDoor;
     //var menu
     public GameObject menuWin, menuLose;
@@ -14,6 +14,8 @@ public class ScriptWin : MonoBehaviour
 
 
     public bool inWin, finDuLevel, isOpen;
+
+    public Animator animatorDoor;
 
     void Start()
     {
@@ -23,6 +25,10 @@ public class ScriptWin : MonoBehaviour
         if (isOpen == false)
         {
             spritDoor.sprite = doorClose;
+        }
+        else
+        {
+            spritDoor.sprite = doorOpen;
         }
     }
 
@@ -43,6 +49,9 @@ public class ScriptWin : MonoBehaviour
                 Instantiate(menuLose, transformUi);
             }
         }
+
+        //anim port
+        animatorDoor.SetBool("BoolIsOpen", isOpen);
     }
 
     void OnTriggerEnter2D(Collider2D col)

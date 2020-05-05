@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2036184823767039391}
   - component: {fileID: 377137309770569493}
+  - component: {fileID: 698903359201679327}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -164,6 +165,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &698903359201679327
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045364299740547722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a058b443f846e7b4c863c550f65f4af7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5122966960038884727
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,12 +388,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptBarreAction: {fileID: 0}
   doorClose: {fileID: 21300000, guid: 1944bc61ace5a914b8241b359c086c99, type: 3}
-  menuWin: {fileID: 0}
-  menuLose: {fileID: 0}
+  doorOpen: {fileID: 21300000, guid: 76544940614e63746aff1e982269a735, type: 3}
+  spritDoor: {fileID: 377137309770569493}
+  menuWin: {fileID: 3446072866943077399, guid: eba1ffc90aa70f24db493f851eaf6630, type: 3}
+  menuLose: {fileID: 5770837433318070891, guid: 9e1c058d97c66ff4a98ec90677e54768,
+    type: 3}
   transformUi: {fileID: 0}
   inWin: 0
   finDuLevel: 0
   isOpen: 0
+  animatorDoor: {fileID: 698903359201679327}
 --- !u!1 &8344438153589878931
 GameObject:
   m_ObjectHideFlags: 0
