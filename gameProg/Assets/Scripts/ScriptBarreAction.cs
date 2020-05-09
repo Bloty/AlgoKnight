@@ -16,7 +16,7 @@ public class ScriptBarreAction : MonoBehaviour
 
     //for
     public ScriptBtFor scriptBtFor;
-    public Vector3 posPour;
+    //public Vector3 posPour;
 
     //item
     public ScriptWin scriptWin;
@@ -64,16 +64,26 @@ public class ScriptBarreAction : MonoBehaviour
         {
             //Debug.Log("POUR");
 
-            posPour = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            //posPour = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-            scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] = (int)scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] - 1;
+            //-1 iteration
+            //scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] = (int)scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] - 1;
 
+            //----------------------------------------------------------------------------
+            //incrémentation du nb de boucle ouverte
+            scriptBtFor.nbBoucleOuverte++;
+            //on reinitialise le nb itération de la boucle en cour avec la liste d'iteration
+            scriptBtFor.listeIterationEnCour[((scriptBtFor.nbBoucleOuverte) + (scriptBtFor.nbBoucleFini)) - 1] = scriptBtFor.listeIteration[((scriptBtFor.nbBoucleOuverte) + (scriptBtFor.nbBoucleFini)) - 1];
+            //-----------------------------------------------------------------------------
         }
 
         if (col.gameObject.CompareTag("ActionFinPour"))
         {
-            //Debug.Log("Fin POUR");
-
+            //Debug.Log("0 : "+ scriptBtFor.listeIterationEnCour[0]);
+            //Debug.Log("1 : " + scriptBtFor.listeIterationEnCour[1]);
+            //Debug.Log("2 : " + scriptBtFor.listeIterationEnCour[2]);
+            // Debug.Log("3 : " + scriptBtFor.listeIterationEnCour[3]);
+            /*
             if ((int)scriptBtFor.listeIteration[scriptBtFor.listeIteration.Count - scriptBtFor.nBBouclePour] >= 0)
             {
                 transform.position = posPour;
@@ -81,7 +91,52 @@ public class ScriptBarreAction : MonoBehaviour
             else
             {
                 scriptBtFor.nBBouclePour--;
+            }*/
+
+            //----------------------------------------------
+            //on décrémante itération de la boucle en cour
+            scriptBtFor.listeIterationEnCour[((scriptBtFor.nbBoucleOuverte) + (scriptBtFor.nbBoucleFini)) - 1] = (int)scriptBtFor.listeIterationEnCour[((scriptBtFor.nbBoucleOuverte) + (scriptBtFor.nbBoucleFini)) - 1] - 1;
+            
+
+            if ((int)scriptBtFor.listeIterationEnCour[((scriptBtFor.nbBoucleOuverte) + (scriptBtFor.nbBoucleFini)) -1] >= 1)
+            {
+                //deplacer la barre
+                Transform coordPour;
+                coordPour = (Transform)scriptBtFor.listeCoordonne[((scriptBtFor.nbBoucleOuverte) + (scriptBtFor.nbBoucleFini)) - 1];
+                transform.position = new Vector3(transform.position.x, coordPour.position.y, 0);
+
             }
+            else
+            {   
+                
+
+                if ((scriptBtFor.nbBoucleOuverte + scriptBtFor.nbBoucleFini) -1 != 0)
+                {
+                    Debug.Log((scriptBtFor.nbBoucleOuverte + scriptBtFor.nbBoucleFini) - 1);
+                    for (int i = 0; i < (scriptBtFor.nbBoucleOuverte + scriptBtFor.nbBoucleFini)-1 ; i++)
+                    {
+                        Debug.Log(i);
+                        if ((int)scriptBtFor.listeIterationEnCour[i] > 1)
+                        {
+                            scriptBtFor.boolBoucleFin = false;
+                        }
+                    }
+                }
+                else
+                {
+                    scriptBtFor.boolBoucleFin = true;
+                }
+
+                if (scriptBtFor.boolBoucleFin == true)
+                {
+                    scriptBtFor.nbBoucleFini++;
+                }
+
+                scriptBtFor.boolBoucleFin = true;
+                scriptBtFor.nbBoucleOuverte--;
+            }
+            //----------------------------------------------
+
         }
         //----------------------------------------------
 

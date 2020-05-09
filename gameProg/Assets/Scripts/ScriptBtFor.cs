@@ -7,27 +7,41 @@ public class ScriptBtFor: MonoBehaviour
 {
     public int nBBouclePour;
     public GameObject btFinPour, goDrowdown;
-    public ArrayList listeIteration = new ArrayList();
     public Dropdown choixIter;
     public bool drowdownActif;
 
+
+    public ArrayList listeIteration = new ArrayList();
+    public ArrayList listeIterationEnCour = new ArrayList();
+    public ArrayList listeCoordonne = new ArrayList();
+    public int nbBoucleOuverte;
+    public int nbBoucleFini;
+    public bool boolBoucleFin;
+   
+
     void Start()
     {
-        drowdownActif = false;  
+        drowdownActif = false;
+        nBBouclePour = 0;
+        nbBoucleOuverte = 0;
+        nbBoucleFini = 0;
+        boolBoucleFin = true;
     }
 
     public void selectInterationPour()
     {
         if (drowdownActif == true)
         {
-            listeIteration.Add(0);
-            listeIteration[nBBouclePour - 1] = choixIter.value;
-            
+            listeIteration.Add(choixIter.value + 1);
+            listeIterationEnCour.Add(choixIter.value + 1);
+
+
+
 
             goDrowdown.SetActive(false);
             drowdownActif = false;
 
-            btFinPour.SetActive(true);
+            //btFinPour.SetActive(true);
             choixIter.value = 0;
 
         }       

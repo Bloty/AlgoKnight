@@ -104,8 +104,14 @@ public class ScriptButton : MonoBehaviour
     //POUR-------------------------------------
     public void buttonPour()
     {
+        
+
+        //on instancie
         if (nbAction < listePosAction.Count - 1)
         {
+            //récupere le coodonner
+            scriptBtFor.listeCoordonne.Add((Transform)listePosAction[nbAction]);
+
             instantiatePrefab(actionPour);
         }
 
@@ -123,7 +129,7 @@ public class ScriptButton : MonoBehaviour
             instantiatePrefab(actionFinPour);
         }
 
-        btFinPour.SetActive(false);
+        //btFinPour.SetActive(false);
 
         buttonStart.interactable = true;
     }

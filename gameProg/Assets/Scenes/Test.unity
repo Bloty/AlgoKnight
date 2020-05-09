@@ -2023,7 +2023,7 @@ PrefabInstance:
     - target: {fileID: 3354424924845895644, guid: 2e035b87f51ffaa45bd3f47ad16e0702,
         type: 3}
       propertyPath: isOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3775748551222130956, guid: 2e035b87f51ffaa45bd3f47ad16e0702,
         type: 3}
@@ -3613,12 +3613,12 @@ PrefabInstance:
     - target: {fileID: 1174450804597207739, guid: bb2f8ca1c0e0069418be19e565cc00db,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 838
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 1174450804597207739, guid: bb2f8ca1c0e0069418be19e565cc00db,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 1174450804597207739, guid: bb2f8ca1c0e0069418be19e565cc00db,
         type: 3}
@@ -3802,7 +3802,7 @@ PrefabInstance:
     - target: {fileID: 3883331693708345637, guid: a3d4ef0699edaa343a83a0e33d297ef1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3883331693708345637, guid: a3d4ef0699edaa343a83a0e33d297ef1,
         type: 3}
@@ -3977,6 +3977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nBBouclePour
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999344187088657533, guid: bdcc31a0dd0593647a658146b66bb0b9,
+        type: 3}
+      propertyPath: stock
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6999344187249170794, guid: bdcc31a0dd0593647a658146b66bb0b9,
         type: 3}

@@ -396,7 +396,7 @@ MonoBehaviour:
   transformUi: {fileID: 0}
   inWin: 0
   finDuLevel: 0
-  isOpen: 0
+  isOpen: 1
   animatorDoor: {fileID: 698903359201679327}
 --- !u!1 &8344438153589878931
 GameObject:
