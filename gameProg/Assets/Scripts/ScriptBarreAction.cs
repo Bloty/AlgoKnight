@@ -18,6 +18,11 @@ public class ScriptBarreAction : MonoBehaviour
     public ScriptBtFor scriptBtFor;
     //public Vector3 posPour;
 
+    //if
+    public ScriptBtIf scriptBtIf;
+    public BoxCollider2D colBarre;
+    //public GameObject colCptSi;
+
     //item
     public ScriptWin scriptWin;
     public ScriptTabItem scriptTabItem;
@@ -31,6 +36,7 @@ public class ScriptBarreAction : MonoBehaviour
     {
         finAction = false;
         rb.AddForce(-transform.up * speed, ForceMode2D.Impulse);
+        //colCptSi.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -108,8 +114,6 @@ public class ScriptBarreAction : MonoBehaviour
             }
             else
             {   
-                
-
                 if ((scriptBtFor.nbBoucleOuverte + scriptBtFor.nbBoucleFini) -1 != 0)
                 {
                     Debug.Log((scriptBtFor.nbBoucleOuverte + scriptBtFor.nbBoucleFini) - 1);
@@ -188,6 +192,49 @@ public class ScriptBarreAction : MonoBehaviour
         {
             Debug.Log("Use case 2");
         }
+
+        //Condition SI-------------------------------------
+
+        if (col.gameObject.CompareTag("ActionCaseBleu"))
+        {
+            if (scriptPlayer.couleurCase != ScriptPlayer.CouleurCase.bleu)
+            {
+                //deplacer la barre
+                /*
+                Transform coordFinSI;
+                coordFinSI = (Transform)scriptBtIf.listeCoordonne[0];
+                transform.position = new Vector3(transform.position.x, coordFinSI.position.y, 0);
+                */
+
+                colBarre.enabled = false;
+            }
+            else
+            {
+                scriptBtIf.cptSi--;
+            }
+        }
+
+        if (col.gameObject.CompareTag("ActionCaseRouge"))
+        {
+            if (scriptPlayer.couleurCase == ScriptPlayer.CouleurCase.rouge)
+            {
+                Debug.Log("cest rouge");
+            }
+        }
+
+        if (col.gameObject.CompareTag("ActionFinSI"))
+        {
+            if (scriptBtIf.cptSi > 0)
+            {
+                scriptBtIf.cptSi--;
+            }
+
+            if (scriptBtIf.cptSi == 0)
+            {
+                colBarre.enabled = true;
+            }
+        }
+
 
         //------------------------------------------------
         //fin de l'algo

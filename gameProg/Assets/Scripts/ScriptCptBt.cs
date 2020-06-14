@@ -12,6 +12,10 @@ public class ScriptCptBt : MonoBehaviour
     void Start()
     {
         txtStock.text = ("" + stock);
+        if (stock <= 0)
+        {
+            button.interactable = false;
+        }
     }
 
     public void stockMoins()

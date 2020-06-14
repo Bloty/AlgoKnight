@@ -20,6 +20,12 @@ TagManager:
   - Case0
   - Case1
   - Case2
+  - CaseBleu
+  - CaseRouge
+  - ActionCaseBleu
+  - ActionCaseRouge
+  - CptSi
+  - ActionFinSI
   layers:
   - Default
   - TransparentFX
