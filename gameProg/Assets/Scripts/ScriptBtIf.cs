@@ -14,7 +14,6 @@ public class ScriptBtIf : MonoBehaviour
 
     public int cptSi;
 
-    //public ArrayList listeCoordonne = new ArrayList();
 
     void Start()
     {

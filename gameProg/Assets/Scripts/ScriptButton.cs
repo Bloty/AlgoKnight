@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ScriptButton : MonoBehaviour
 {
-    public GameObject actionPosXPlus1, actionPosXMoins1, actionPosYPlus1, actionPosYMoins1, actionPour, actionFinPour, actionAttaque, actionFinSi, finAction;
+    public GameObject actionPosXPlus1, actionPosXMoins1, actionPosYPlus1, actionPosYMoins1,
+                    actionPour, actionFinPour, actionAttaque, actionFinSi, actionAttendre, finAction;
     //Position des action
     public Transform posAction1, posAction2, posAction3, posAction4, posAction5, posAction6,
                        posAction7, posAction8, posAction9, posAction10, posAction11, posAction12,
@@ -179,5 +180,13 @@ public class ScriptButton : MonoBehaviour
         //scriptBtUtiliser.nbUtilisation++;
 
         buttonStart.interactable = false;
+    }
+
+    public void buttonAttendre()
+    {
+        if (nbAction < listePosAction.Count - 1)
+        {
+            instantiatePrefab(actionAttendre);
+        }
     }
 }

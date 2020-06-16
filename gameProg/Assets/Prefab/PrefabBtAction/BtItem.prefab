@@ -237,13 +237,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156fc57693657bf4096f0888bd3b52f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbUtilisation: 0
   drowdownActif: 0
   goDrowdown: {fileID: 6659161026024027651}
   choixIndexItem: {fileID: 1830793334903120699}
-  actionKey: {fileID: 4685495059783493085, guid: 1f3800d682342f5489036564230dbade,
-    type: 3}
+  buttonStart: {fileID: 0}
   scriptButton: {fileID: 0}
+  actionUseTabCase0: {fileID: 0}
+  actionUseTabCase1: {fileID: 0}
+  actionUseTabCase2: {fileID: 0}
+  scriptTabItem: {fileID: 0}
 --- !u!1 &1208543971017025851
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

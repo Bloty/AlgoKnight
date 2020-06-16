@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 
@@ -8,7 +9,9 @@ public class ScriptBarreAction : MonoBehaviour
     //barre
     public float speed;
     public Rigidbody2D rb;
-    
+
+    public int nbActionFaite;
+
     //player
     public Transform posPlayer;
     public ScriptPlayer scriptPlayer;
@@ -27,16 +30,14 @@ public class ScriptBarreAction : MonoBehaviour
     public ScriptWin scriptWin;
     public ScriptTabItem scriptTabItem;
 
-
     public bool finAction;
-
 
 
     void Start()
     {
         finAction = false;
         rb.AddForce(-transform.up * speed, ForceMode2D.Impulse);
-        //colCptSi.SetActive(false);
+        nbActionFaite = 0;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -46,23 +47,27 @@ public class ScriptBarreAction : MonoBehaviour
         if (col.gameObject.CompareTag("ActionPosXPlus1") && scriptPlayer.colWallXPlus == false)
         {
             posPlayer.position = new Vector3(posPlayer.position.x + 1, posPlayer.position.y, -0.1f);
+            nbActionFaite++;
         }
         //x-1
         if (col.gameObject.CompareTag("ActionPosXMoins1") && scriptPlayer.colWallXMoins == false)
         {
             posPlayer.position = new Vector3(posPlayer.position.x - 1, posPlayer.position.y, -0.1f);
+            nbActionFaite++;
         }
 
         //y+1
         if (col.gameObject.CompareTag("ActionPosYPlus1") && scriptPlayer.colWallYPlus == false)
         {
             posPlayer.position = new Vector3(posPlayer.position.x, posPlayer.position.y + 1, -0.1f);
+            nbActionFaite++;
         }
 
         //y-1
         if (col.gameObject.CompareTag("ActionPosYMoins1") && scriptPlayer.colWallYMoins == false)
         {
             posPlayer.position = new Vector3(posPlayer.position.x, posPlayer.position.y -1, -0.1f);
+            nbActionFaite++;
         }
 
         //POur-------------------------------------------
@@ -166,6 +171,14 @@ public class ScriptBarreAction : MonoBehaviour
             {
                 colHitYMoins.SetActive(true);
             }
+
+            nbActionFaite++;
+        }
+
+        //attendre-----------------------------------
+        if (col.gameObject.CompareTag("Attendre"))
+        {
+            nbActionFaite++;
         }
 
         //Use case---------------------------------
@@ -173,24 +186,43 @@ public class ScriptBarreAction : MonoBehaviour
         if (col.gameObject.CompareTag("Case0"))
         {
             Debug.Log("Use case 0");
-            //Key paramrtre possible(int index)
+            
             if (scriptTabItem.tabItem[0] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
             {
                 scriptWin.isOpen = true;
                 scriptTabItem.tabItem[0] = ScriptTabItem.Item.Null;
                 Debug.Log("porte ouvert");
             }
-            
+
+            nbActionFaite++;
         }
-        //case 1
+        //case 1 
         if (col.gameObject.CompareTag("Case1"))
         {
             Debug.Log("Use case 1");
+
+            if (scriptTabItem.tabItem[1] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
+            {
+                scriptWin.isOpen = true;
+                scriptTabItem.tabItem[1] = ScriptTabItem.Item.Null;
+                Debug.Log("porte ouvert");
+            }
+
+            nbActionFaite++;
         }
         //case 2
         if (col.gameObject.CompareTag("Case2"))
         {
             Debug.Log("Use case 2");
+
+            if (scriptTabItem.tabItem[2] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
+            {
+                scriptWin.isOpen = true;
+                scriptTabItem.tabItem[2] = ScriptTabItem.Item.Null;
+                Debug.Log("porte ouvert");
+            }
+
+            nbActionFaite++;
         }
 
         //Condition SI-------------------------------------
@@ -199,13 +231,6 @@ public class ScriptBarreAction : MonoBehaviour
         {
             if (scriptPlayer.couleurCase != ScriptPlayer.CouleurCase.bleu)
             {
-                //deplacer la barre
-                /*
-                Transform coordFinSI;
-                coordFinSI = (Transform)scriptBtIf.listeCoordonne[0];
-                transform.position = new Vector3(transform.position.x, coordFinSI.position.y, 0);
-                */
-
                 colBarre.enabled = false;
             }
             else
@@ -218,7 +243,11 @@ public class ScriptBarreAction : MonoBehaviour
         {
             if (scriptPlayer.couleurCase == ScriptPlayer.CouleurCase.rouge)
             {
-                Debug.Log("cest rouge");
+                colBarre.enabled = false;
+            }
+            else
+            {
+                scriptBtIf.cptSi--;
             }
         }
 

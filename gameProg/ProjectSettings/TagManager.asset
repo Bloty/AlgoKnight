@@ -26,6 +26,7 @@ TagManager:
   - ActionCaseRouge
   - CptSi
   - ActionFinSI
+  - Attendre
   layers:
   - Default
   - TransparentFX
