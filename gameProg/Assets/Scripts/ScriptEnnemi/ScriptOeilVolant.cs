@@ -30,12 +30,12 @@ public class ScriptOeilVolant : MonoBehaviour
             {
                 if (etatDeplacement == EtatDeplacement.Haut)
                 {
-                    transform.position = new Vector3(transform.position.x, transform.position.y - 1, -0.1f);
+                    transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
                     etatDeplacement = EtatDeplacement.Bas;
                 }
                 else
                 {
-                    transform.position = new Vector3(transform.position.x, transform.position.y + 1, -0.1f);
+                    transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
                     etatDeplacement = EtatDeplacement.Haut;
                 }
             }

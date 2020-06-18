@@ -44,6 +44,7 @@ public class ScriptTabItem : MonoBehaviour
         if (tabItem[index] == ScriptTabItem.Item.PotionBouclier)
         {
             scriptPlayer.bouclier = true;
+            tabItem[index] = ScriptTabItem.Item.Null;
         }
     }
 }

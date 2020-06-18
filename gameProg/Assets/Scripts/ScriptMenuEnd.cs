@@ -14,6 +14,7 @@ public class ScriptMenuEnd : MonoBehaviour
         listLevel.Add("Level2");
         listLevel.Add("Level3");
         listLevel.Add("Level4");
+        listLevel.Add("Level5");
     }
 
 

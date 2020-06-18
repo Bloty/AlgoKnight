@@ -30,12 +30,12 @@ public class ScriptGobelin : MonoBehaviour
             {
                 if (etatDeplacement == EtatDeplacement.gauche)
                 {
-                    transform.position = new Vector3(transform.position.x - 1, transform.position.y, -0.1f);
+                    transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
                     etatDeplacement = EtatDeplacement.droite;    
                 }
                 else
                 {
-                    transform.position = new Vector3(transform.position.x + 1, transform.position.y, -0.1f);
+                    transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
                     etatDeplacement = EtatDeplacement.gauche;                  
                 }                
             }

@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2751932872020348090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8094728327512189944}
@@ -77,6 +77,11 @@ MonoBehaviour:
   colHitXMoins: {fileID: 0}
   colHitYPlus: {fileID: 0}
   colHitYMoins: {fileID: 0}
+  scriptPlayer: {fileID: 0}
+  colXPlus: {fileID: 0}
+  colXMoins: {fileID: 0}
+  colYPlus: {fileID: 0}
+  colYMoins: {fileID: 0}
   animAttaque: {fileID: 4867242736745941981, guid: 62587c55af5ae4b4fb36b1831fa3a9ac,
     type: 3}
 --- !u!114 &4769919716375176923
