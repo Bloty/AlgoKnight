@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScriptCaseTab : MonoBehaviour
 {
     public ScriptTabItem scriptTabItem;
-    public GameObject spritKey;
+    public GameObject spritKey, spritPotionBouclier;
     public int numeroCase;
 
     void Update()
@@ -17,6 +17,15 @@ public class ScriptCaseTab : MonoBehaviour
         else
         {
             spritKey.SetActive(false);
+        }
+
+        if (scriptTabItem.tabItem[numeroCase] == ScriptTabItem.Item.PotionBouclier)
+        {
+            spritPotionBouclier.SetActive(true);
+        }
+        else
+        {
+            spritPotionBouclier.SetActive(false);
         }
     }
 }

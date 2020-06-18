@@ -77,6 +77,8 @@ MonoBehaviour:
   colHitXMoins: {fileID: 0}
   colHitYPlus: {fileID: 0}
   colHitYMoins: {fileID: 0}
+  animAttaque: {fileID: 4867242736745941981, guid: 62587c55af5ae4b4fb36b1831fa3a9ac,
+    type: 3}
 --- !u!114 &4769919716375176923
 MonoBehaviour:
   m_ObjectHideFlags: 0

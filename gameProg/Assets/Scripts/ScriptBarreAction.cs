@@ -24,7 +24,7 @@ public class ScriptBarreAction : MonoBehaviour
     //if
     public ScriptBtIf scriptBtIf;
     public BoxCollider2D colBarre;
-    //public GameObject colCptSi;
+    public SpriteRenderer spritBarre;
 
     //item
     public ScriptWin scriptWin;
@@ -186,13 +186,8 @@ public class ScriptBarreAction : MonoBehaviour
         if (col.gameObject.CompareTag("Case0"))
         {
             Debug.Log("Use case 0");
-            
-            if (scriptTabItem.tabItem[0] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
-            {
-                scriptWin.isOpen = true;
-                scriptTabItem.tabItem[0] = ScriptTabItem.Item.Null;
-                Debug.Log("porte ouvert");
-            }
+
+            scriptTabItem.utiliserItem(0);
 
             nbActionFaite++;
         }
@@ -201,12 +196,7 @@ public class ScriptBarreAction : MonoBehaviour
         {
             Debug.Log("Use case 1");
 
-            if (scriptTabItem.tabItem[1] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
-            {
-                scriptWin.isOpen = true;
-                scriptTabItem.tabItem[1] = ScriptTabItem.Item.Null;
-                Debug.Log("porte ouvert");
-            }
+            scriptTabItem.utiliserItem(1);
 
             nbActionFaite++;
         }
@@ -215,12 +205,7 @@ public class ScriptBarreAction : MonoBehaviour
         {
             Debug.Log("Use case 2");
 
-            if (scriptTabItem.tabItem[2] == ScriptTabItem.Item.Key && scriptWin.inWin == true)
-            {
-                scriptWin.isOpen = true;
-                scriptTabItem.tabItem[2] = ScriptTabItem.Item.Null;
-                Debug.Log("porte ouvert");
-            }
+            scriptTabItem.utiliserItem(2);
 
             nbActionFaite++;
         }
@@ -232,6 +217,7 @@ public class ScriptBarreAction : MonoBehaviour
             if (scriptPlayer.couleurCase != ScriptPlayer.CouleurCase.bleu)
             {
                 colBarre.enabled = false;
+                spritBarre.enabled = false;
             }
             else
             {
@@ -244,6 +230,7 @@ public class ScriptBarreAction : MonoBehaviour
             if (scriptPlayer.couleurCase == ScriptPlayer.CouleurCase.rouge)
             {
                 colBarre.enabled = false;
+                spritBarre.enabled = false;
             }
             else
             {
@@ -261,6 +248,7 @@ public class ScriptBarreAction : MonoBehaviour
             if (scriptBtIf.cptSi == 0)
             {
                 colBarre.enabled = true;
+                spritBarre.enabled = true;
             }
         }
 
