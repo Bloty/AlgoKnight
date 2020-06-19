@@ -22,6 +22,7 @@ public class ScriptGobelin : MonoBehaviour
 
     void Update()
     {
+        //deplacement du gobelin
         if (scriptBarreAction.nbActionFaite != nbActionFaite)
         {
             nbActionFaite = scriptBarreAction.nbActionFaite;

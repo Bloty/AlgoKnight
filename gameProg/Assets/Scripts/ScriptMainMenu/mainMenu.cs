@@ -69,6 +69,18 @@ public class mainMenu : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void LoadPartie2()
+    {
+        SceneManager.LoadScene("Level6");
+        ScriptVarGlobal.level = 6;
+    }
+
+    public void LoadPartie3()
+    {
+        SceneManager.LoadScene("Level11");
+        ScriptVarGlobal.level = 11;
+    }
+
     //quitter le jeu
     public void Quit()
     {

@@ -10,7 +10,7 @@ public class ScriptButton : MonoBehaviour
     //Position des action
     public Transform posAction1, posAction2, posAction3, posAction4, posAction5, posAction6,
                        posAction7, posAction8, posAction9, posAction10, posAction11, posAction12,
-                        posAction13, posAction14, posAction15;                       
+                        posAction13, posAction14, posAction15, posAction16, posAction17, posAction18;                       
     private ArrayList listePosAction = new ArrayList();
     //---------------------------
 
@@ -48,7 +48,10 @@ public class ScriptButton : MonoBehaviour
         listePosAction.Add(posAction12);
         listePosAction.Add(posAction13);
         listePosAction.Add(posAction14);
-        listePosAction.Add(posAction15);        
+        listePosAction.Add(posAction15);
+        listePosAction.Add(posAction16);
+        listePosAction.Add(posAction17);
+        listePosAction.Add(posAction18);
     }
 
     //instancier un prefab

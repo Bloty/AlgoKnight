@@ -32,7 +32,7 @@ public class ScriptBarreAction : MonoBehaviour
 
     public bool finAction;
 
-
+    //collition de la barre avec les action
     void Start()
     {
         finAction = false;
@@ -46,27 +46,27 @@ public class ScriptBarreAction : MonoBehaviour
         //x+1
         if (col.gameObject.CompareTag("ActionPosXPlus1") && scriptPlayer.colWallXPlus == false)
         {
-            posPlayer.position = new Vector3(posPlayer.position.x + 1, posPlayer.position.y, -0.1f);
+            posPlayer.position = new Vector3(posPlayer.position.x + 1, posPlayer.position.y, posPlayer.position.z);
             nbActionFaite++;
         }
         //x-1
         if (col.gameObject.CompareTag("ActionPosXMoins1") && scriptPlayer.colWallXMoins == false)
         {
-            posPlayer.position = new Vector3(posPlayer.position.x - 1, posPlayer.position.y, -0.1f);
+            posPlayer.position = new Vector3(posPlayer.position.x - 1, posPlayer.position.y, posPlayer.position.z);
             nbActionFaite++;
         }
 
         //y+1
         if (col.gameObject.CompareTag("ActionPosYPlus1") && scriptPlayer.colWallYPlus == false)
         {
-            posPlayer.position = new Vector3(posPlayer.position.x, posPlayer.position.y + 1, -0.1f);
+            posPlayer.position = new Vector3(posPlayer.position.x, posPlayer.position.y + 1, posPlayer.position.z);
             nbActionFaite++;
         }
 
         //y-1
         if (col.gameObject.CompareTag("ActionPosYMoins1") && scriptPlayer.colWallYMoins == false)
         {
-            posPlayer.position = new Vector3(posPlayer.position.x, posPlayer.position.y -1, -0.1f);
+            posPlayer.position = new Vector3(posPlayer.position.x, posPlayer.position.y -1, posPlayer.position.z);
             nbActionFaite++;
         }
 
@@ -227,7 +227,7 @@ public class ScriptBarreAction : MonoBehaviour
 
         if (col.gameObject.CompareTag("ActionCaseRouge"))
         {
-            if (scriptPlayer.couleurCase == ScriptPlayer.CouleurCase.rouge)
+            if (scriptPlayer.couleurCase != ScriptPlayer.CouleurCase.rouge)
             {
                 colBarre.enabled = false;
                 spritBarre.enabled = false;
@@ -245,7 +245,7 @@ public class ScriptBarreAction : MonoBehaviour
                 scriptBtIf.cptSi--;
             }
 
-            if (scriptBtIf.cptSi == 0)
+            if (scriptBtIf.cptSi <= 0)
             {
                 colBarre.enabled = true;
                 spritBarre.enabled = true;

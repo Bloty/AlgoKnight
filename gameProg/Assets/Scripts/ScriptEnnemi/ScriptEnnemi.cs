@@ -14,11 +14,12 @@ public class ScriptEnnemi : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        //Degat au ennemies
         if (col.gameObject.CompareTag("Hit"))
         {
-            Debug.Log("Hit");
             life--;
 
+            //animation d'attaque
             if (scriptPlayer.colEnnemiXPlus)
             {
                 Instantiate(animAttaque, colXPlus.transform);
@@ -36,12 +37,13 @@ public class ScriptEnnemi : MonoBehaviour
                 Instantiate(animAttaque, colYMoins.transform);
             }
 
-
+            //destruction de l'objet
             if (life <= 0)
             {
                 Destroy(this.gameObject);
             }
 
+            //désactive la collision HIT
             colHitXPlus.SetActive(false);
             colHitXMoins.SetActive(false);
             colHitYPlus.SetActive(false);

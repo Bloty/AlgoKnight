@@ -8,6 +8,8 @@ public class ScriptCaseTab : MonoBehaviour
     public GameObject spritKey, spritPotionBouclier;
     public int numeroCase;
 
+
+    //activer les sprite dans le tableau
     void Update()
     {
         if (scriptTabItem.tabItem[numeroCase] == ScriptTabItem.Item.Key)

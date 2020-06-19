@@ -32,6 +32,7 @@ public class ScriptTabItem : MonoBehaviour
         }
     }
 
+    //fonction d'utilisation d'item par raport a l'index du tab
     public void utiliserItem(int index)
     {
         if (tabItem[index] == ScriptTabItem.Item.Key && scriptWin.inWin == true)

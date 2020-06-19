@@ -15,6 +15,18 @@ public class ScriptMenuEnd : MonoBehaviour
         listLevel.Add("Level3");
         listLevel.Add("Level4");
         listLevel.Add("Level5");
+        listLevel.Add("Level6");
+        listLevel.Add("Level7");
+        listLevel.Add("Level8");
+        listLevel.Add("Level9");
+        listLevel.Add("Level10");
+        listLevel.Add("Level11");
+        listLevel.Add("Level12");
+        listLevel.Add("Level13");
+        listLevel.Add("Level14");
+        listLevel.Add("Level15");
+        listLevel.Add("Level16");
+        listLevel.Add("SceneFin");
     }
 
 
@@ -26,5 +38,10 @@ public class ScriptMenuEnd : MonoBehaviour
     public void reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void menuPrincipal()
+    {
+        SceneManager.LoadScene("menu_principal");
     }
 }
